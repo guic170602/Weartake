@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weartake</title>
+    <link rel="stylesheet" href="css/globalStyle.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Weartake</h1>
+        <nav>
+            <ul>
+                <li><button class="filtro atual" id="todos"><i class="fas fa-infinity"></i>Todos</a></li>
+                <li><button class="filtro" id="acessorios"><i class="fab fa-pied-piper-hat"></i>Acessórios</button></li>
+                <li><button class="filtro" id="calçados"><i class="fas fa-shoe-prints"></i>Calçados</button></li>
+                <li><button class="filtro" id="camisetas"><i class="fas fa-tshirt"></i>Camisetas</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="pesquisaCelular">
+            <div class="divPesquisa">
+                <input type="text" class="pesquisa" placeholder="Digite aqui sua pesquisa">
+                <button class="pesquisar">Pesquisar</button>
+            </div>
+        </section>
+        <section class="products"></section>
+        <section class="pesquisaECarrinho">
+            <div class="divPesquisa hidden">
+                <input type="text" class="pesquisa" placeholder="Digite aqui sua pesquisa">
+                <button class="pesquisar">Pesquisar</button>
+            </div>
+            <div class="carro">
+                <h3><i class="fas fa-shopping-cart"></i>Carrinho de compras</h3>
+                <div class="carrinhoDeCompras"></div>
+                <div class="quantidadeTotal"></div>
+            </div>
+        </section>
+    </main>
+    <script src="./fontAwsome/js/all.min.js"></script>
+    <script src="./js/database/produtos.js"></script>
+    <script src="./js/criaProdutos.js"></script>
+    <script src="./js/carrinho.js"></script>
+    <script src="./js/filtro.js"></script>
+</body>
+</html>

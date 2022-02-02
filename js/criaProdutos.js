@@ -78,6 +78,4 @@ function criaPrudutos(produtos){
     }
 }
 
-const cart = []
-
 criaPrudutos(produtosBd)

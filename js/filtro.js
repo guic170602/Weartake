@@ -7,7 +7,7 @@ function filtro(){
                 const newProduto = produtosBd.filter(produto => produto.nome.toLowerCase().includes(input[index].value.toLowerCase()))
                 criaPrudutos(newProduto)
 
-                addAoCarrinho(newProduto)
+                add(newProduto)
             }
         })
     }
@@ -18,7 +18,7 @@ function filtro(){
             const newProduto = produtosBd.filter(produto => produto.nome.toLowerCase().includes(input[index].value.toLowerCase()))
             criaPrudutos(newProduto)
 
-            addAoCarrinho(newProduto)
+            add(newProduto)
         })
     }
 
@@ -28,7 +28,7 @@ function filtro(){
         const newProduto = produtosBd
         criaPrudutos(newProduto)
 
-        addAoCarrinho(newProduto)
+        add(newProduto)
     })
     
     const acessorios = document.getElementById('acessorios')
@@ -37,7 +37,7 @@ function filtro(){
         const newProduto = produtosBd.filter(produto => produto.categoria.toLowerCase().includes('acessórios'))
         criaPrudutos(newProduto)
 
-        addAoCarrinho(newProduto)
+        add(newProduto)
     })
     
     const calçados = document.getElementById('calçados')
@@ -46,7 +46,7 @@ function filtro(){
         const newProduto = produtosBd.filter(produto => produto.categoria.toLowerCase().includes('calçados'))
         criaPrudutos(newProduto)
 
-        addAoCarrinho(newProduto)
+        add(newProduto)
     })
     
     const camisetas = document.getElementById('camisetas')
@@ -55,7 +55,7 @@ function filtro(){
         const newProduto = produtosBd.filter(produto => produto.categoria.toLowerCase().includes('camisetas'))
         criaPrudutos(newProduto)
 
-        addAoCarrinho(newProduto)
+        add(newProduto)
     })
 }
 

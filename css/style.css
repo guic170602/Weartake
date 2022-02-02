@@ -1,5 +1,6 @@
 body{
     font-family: 'Inter', sans-serif;
+    background-color: #101920;
 }
 
 body::-webkit-scrollbar{
@@ -21,6 +22,7 @@ header{
 
 header h1{
     font-size: 3.75rem;
+    color: var(--cinza-claro);
     margin: 27px auto;
 }
 
@@ -84,12 +86,14 @@ main{
 .produto{
     width: 300px;
     height: 380px;
-    padding: 0 2px;
-    margin: 0 0 40px;
-    border: 2px solid transparent;
+    margin: 0 10px 40px;
+    border: 2px solid var(--branco);
+    transition: 1s;
 }
 
 .produto:hover{
+    margin-top: -10px;
+    box-shadow: 0px -1px 25px var(--azul-escuro), 1px 1px 25px var(--roxo-claro);
     border: 2px solid var(--azul-escuro);
 }
 
@@ -140,17 +144,16 @@ main{
     display: inline-block;
     color: var(--cinza-claro);
     font-size: 1.75rem;
-    margin-top: 15px;
+    padding: 7.5px 0;
     font-weight: 500;
     background: none;
     border: none;
     cursor: pointer;    
-    border-bottom: 1px solid var(--cinza-claro);
+    text-decoration: underline;
 }
 
 .addCart:hover{
     color: var(--roxo-claro);
-    border-color: var(--roxo-claro);
 }
 
 .pesquisaECarrinho{
@@ -168,6 +171,7 @@ main{
     padding: 17px 14px;
     background-color: var(--branco);
     border: none;
+    color: var(--cinza-claro);
 }
 
 .pesquisa::placeholder{
@@ -271,10 +275,13 @@ main{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    visibility: hidden;   
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
 }
 
 .imagemCarrinho{
-    background-color: #fff;
+    background-color: var(--black-car);
     width: 10rem;
     height: 10rem;
     display: flex;
@@ -319,9 +326,11 @@ main{
 }
 
 .quantidadeTotal{
+    flex-direction: column;
     width: 100%;
     height: 126px;
-    background-color: var(--preto);
+    border-top: 2px solid var(--preto);
+    background-color: var(--black-car);
 }
 
 .quantidade, .total{
@@ -333,7 +342,7 @@ main{
     margin-left: 17px;
     margin-top: 30px;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--branco);
 }
 
@@ -342,7 +351,7 @@ main{
     margin-top: 30px;
     font-size: 2rem;
     font-weight: 400;
-    color: var(--cinza-claro);
+    color: #101920;
 }
 
 .erro{
@@ -350,6 +359,7 @@ main{
     align-self: center;
     font-size: 3.5rem;
     text-align: center;
+    color: var(--cinza-claro);
 }
 
 .erro span{
@@ -424,4 +434,48 @@ main{
         margin-right: 35px;
     }
 
+}
+
+@media screen and (min-width:1300px){
+    .products{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+    }
+    .erro{
+        display: block;
+    }
+}
+
+@media screen and (min-width:1800px){
+    .products{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+    }
+    .erro{
+        display: block;
+    }
+}
+
+@media screen and (min-width:2000px){
+    .products{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin: 0 auto;
+    }
+    .erro{
+        display: block;
+    }
+}
+
+@media screen and (min-width:2370px){
+    .products{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin: 0 auto;
+    }
+    .erro{
+        display: block;
+    }
 }

@@ -1,18 +1,18 @@
-body{
+body {
     font-family: 'Inter', sans-serif;
     background-color: #101920;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 10px;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background-color: var(--cinza-claro);
     border-radius: 10px;
 }
 
-header{
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,25 +20,25 @@ header{
     margin-bottom: 20px;
 }
 
-header h1{
+header h1 {
     font-size: 3.75rem;
     color: var(--cinza-claro);
     margin: 27px auto;
 }
 
-header nav ul{
+header nav ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-header nav ul li{
+header nav ul li {
     text-align: center;
     display: inline-block;
     width: 50%;
 }
 
-.filtro{
+.filtro {
     display: inline-block;
     color: var(--cinza-claro);
     font-size: 1.75rem;
@@ -49,33 +49,34 @@ header nav ul li{
     cursor: pointer;
 }
 
-.atual{
+.atual {
     font-size: 2rem;
     color: var(--preto);
     font-weight: 700;
 }
 
-header nav a:hover, .filtro:hover{
+header nav a:hover,
+.filtro:hover {
     text-decoration: underline var(--azul-escuro);
 }
 
-svg{
+svg {
     margin-right: 5px;
 }
 
-main{
+main {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
     flex-direction: column;
 }
 
-.pesquisaCelular{
+.pesquisaCelular {
     width: 300px;
     margin: 0 auto;
 }
 
-.products{
+.products {
     width: 300px;
     display: flex;
     align-items: center;
@@ -83,7 +84,7 @@ main{
     margin: 0 auto;
 }
 
-.produto{
+.produto {
     width: 300px;
     height: 380px;
     margin: 0 10px 40px;
@@ -91,13 +92,13 @@ main{
     transition: 1s;
 }
 
-.produto:hover{
+.produto:hover {
     margin-top: -10px;
     box-shadow: 0px -1px 25px var(--azul-escuro), 1px 1px 25px var(--roxo-claro);
     border: 2px solid var(--azul-escuro);
 }
 
-.imagem{
+.imagem {
     background-color: var(--branco);
     width: 100%;
     height: 157px;
@@ -106,11 +107,11 @@ main{
     justify-content: center;
 }
 
-.descricaoProduto{
+.descricaoProduto {
     padding: 15px 5px 12px 20px;
 }
 
-.categoria{
+.categoria {
     background-image: var(--grad);
     color: #fff;
     display: flex;
@@ -121,52 +122,55 @@ main{
     margin-top: 15px;
 }
 
-.nome{
+.nome {
     color: var(--preto);
     font-size: 2.25rem;
     margin-top: 15px;
 }
 
-.descricao{
+.descricao {
     color: var(--cinza-claro);
     font-size: 1.5rem;
     margin-top: 15px;
 }
 
-.preco{
-    color: var(--azul-escuro);
+.preco {
+    color: var(--roxo-claro);
     font-size: 1.5rem;
     margin-top: 15px;
     font-weight: 600;
 }
 
-.addCart{
+.addCart {
     display: inline-block;
-    color: var(--cinza-claro);
+    color: var(--black-car);
     font-size: 1.75rem;
-    padding: 7.5px 0;
+    padding: 7.5px;
     font-weight: 500;
     background: none;
     border: none;
-    cursor: pointer;    
-    text-decoration: underline;
+    cursor: pointer;
+    background-image: var(--grad-i);
+    margin-top: 10px;
+    transition: 1s;
+    border-radius: 5px;
 }
 
-.addCart:hover{
-    color: var(--roxo-claro);
+.addCart:hover {
+    color: white;
 }
 
-.pesquisaECarrinho{
+.pesquisaECarrinho {
     width: 300px;
     margin: 0 auto;
 }
 
-.divPesquisa{
+.divPesquisa {
     display: flex;
     margin-bottom: 10px;
 }
 
-.pesquisa{
+.pesquisa {
     width: 260px;
     padding: 17px 14px;
     background-color: var(--branco);
@@ -174,22 +178,22 @@ main{
     color: var(--cinza-claro);
 }
 
-.pesquisa::placeholder{
+.pesquisa::placeholder {
     font-size: 1.75rem;
     color: var(--cinza-claro);
     font-weight: 400;
     font-family: 'Inter', sans-serif;
 }
 
-.add{
+.add {
     animation: add 1s;
 }
 
-.remove{
+.remove {
     animation: remove 1s 1 ease;
 }
 
-.pesquisar{
+.pesquisar {
     max-height: 49px;
     padding: 0 9px;
     margin-left: 9px;
@@ -205,7 +209,7 @@ main{
     cursor: pointer;
 }
 
-.carro > h3{
+.carro>h3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,11 +219,11 @@ main{
     color: #fff;
 }
 
-.carro > h3 svg{
+.carro>h3 svg {
     margin-right: 20px;
 }
 
-.carrinhoDeCompras{
+.carrinhoDeCompras {
     height: 320px;
     width: 100%;
     background-color: var(--branco);
@@ -228,24 +232,24 @@ main{
     align-items: center;
 }
 
-.vazia{
+.vazia {
     text-align: center;
 }
 
-.textoVazio{
+.textoVazio {
     font-weight: 700;
     font-size: 2.75rem;
     margin-bottom: 10px;
     color: var(--preto);
 }
 
-.addItens{
+.addItens {
     font-weight: 400;
     font-size: 1.75rem;
     color: var(--cinza-claro);
 }
 
-.carroDeCompras{
+.carroDeCompras {
     height: 320px;
     overflow-y: hidden;
     overflow: scroll;
@@ -257,30 +261,30 @@ main{
     padding-top: 20px;
 }
 
-.carroDeCompras::-webkit-scrollbar{
+.carroDeCompras::-webkit-scrollbar {
     width: 11px;
     height: 0px;
 }
 
-.carroDeCompras::-webkit-scrollbar-thumb{
+.carroDeCompras::-webkit-scrollbar-thumb {
     background-color: var(--roxo-claro);
     border-radius: 10px;
 }
 
-.carroDeCompras::-webkit-scrollbar-thumb:hover{
+.carroDeCompras::-webkit-scrollbar-thumb:hover {
     background-color: var(--azul-escuro);
 }
 
-.produtoCarrinho{
+.produtoCarrinho {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    visibility: hidden;   
+    visibility: hidden;
     animation: 1s fadeIn;
     animation-fill-mode: forwards;
 }
 
-.imagemCarrinho{
+.imagemCarrinho {
     background-color: var(--black-car);
     width: 10rem;
     height: 10rem;
@@ -288,44 +292,43 @@ main{
     align-items: center;
 }
 
-.imagemCarrinho img{
+.imagemCarrinho img {
     width: 100%;
 }
 
-.dadosProduto{
+.dadosProduto {
     margin-left: 17px;
 }
 
-.nomeDoCarrinho{
+.nomeDoCarrinho {
     color: var(--preto);
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.precoDoCarrinho{
-    color: var(--azul-escuro);
+.precoDoCarrinho {
+    color: var(--roxo-claro);
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.remove{
+.remove {
     color: var(--cinza-claro);
     font-size: 1.5rem;
     font-weight: 400;
     background: none;
     border: none;
     cursor: pointer;
-    border-bottom: 1px solid transparent;
+    
 }
 
-.remove:hover{
-    border-bottom: 1px solid var(--cinza-claro);
-    color: var(--roxo-claro);
+.remove:hover {
+    text-decoration: underline;
 }
 
-.quantidadeTotal{
+.quantidadeTotal {
     flex-direction: column;
     width: 100%;
     height: 126px;
@@ -333,12 +336,14 @@ main{
     background-color: var(--black-car);
 }
 
-.quantidade, .total{
+.quantidade,
+.total {
     display: flex;
     justify-content: space-between;
 }
 
-.textoQuant, .textoTotal{
+.textoQuant,
+.textoTotal {
     margin-left: 17px;
     margin-top: 30px;
     font-size: 2rem;
@@ -346,7 +351,8 @@ main{
     color: var(--branco);
 }
 
-.numQuant, .numTotal{
+.numQuant,
+.numTotal {
     margin-right: 21px;
     margin-top: 30px;
     font-size: 2rem;
@@ -354,7 +360,7 @@ main{
     color: #101920;
 }
 
-.erro{
+.erro {
     margin: 0 auto;
     align-self: center;
     font-size: 3.5rem;
@@ -362,54 +368,79 @@ main{
     color: var(--cinza-claro);
 }
 
-.erro span{
+.erro span {
     font-size: 6rem;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
+#produto0 {
+    animation: showUp 1s 1 ease 0.2s both;
+}
+
+#produto1 {
+    animation: showUp 1s 1 ease 0.4s both;
+}
+
+#produto2 {
+    animation: showUp 1s 1 ease 0.6s both;
+}
+
+#produto3 {
+    animation: showUp 1s 1 ease 0.8s both;
+}
+
+#produto4 {
+    animation: showUp 1s 1 ease 1s both;
+}
+
+#produto5 {
+    animation: showUp 1s 1 ease 1.2s both;
+}
+
+
 @media screen and (min-width:700px) {
 
-    header{
+    header {
         flex-direction: row;
         height: 70px;
         justify-content: space-between;
         align-items: center;
     }
 
-    header h1{
+    header h1 {
         margin: 0;
         margin-left: 100px;
     }
 
-    header nav{
+    header nav {
         margin: 0;
         margin-right: 50px;
     }
 
-    header nav ul{
+    header nav ul {
         display: block;
         width: max-content;
     }
 
-    header nav ul li{
+    header nav ul li {
         width: max-content;
         display: inline-block;
     }
 
-    main{
+    main {
         flex-direction: row;
         padding: 0 15px;
         justify-content: center;
     }
 
-    .pesquisaCelular{
+    .pesquisaCelular {
         display: none;
     }
 
-    .products{
+    .products {
         flex-direction: row;
         width: max-content;
         height: max-content;
@@ -417,65 +448,69 @@ main{
         align-self: flex-start;
     }
 
-    .erro{
+    .erro {
         align-self: center;
     }
 
-    .produto{
+    .produto {
         margin-left: 35px;
     }
 
-    .divPesquisa{
+    .divPesquisa {
         display: flex;
     }
 
-    .pesquisaECarrinho{
+    .pesquisaECarrinho {
         width: 340px;
         margin-right: 35px;
     }
 
 }
 
-@media screen and (min-width:1300px){
-    .products{
+@media screen and (min-width:1300px) {
+    .products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 0 auto;
     }
-    .erro{
+
+    .erro {
         display: block;
     }
 }
 
-@media screen and (min-width:1800px){
-    .products{
+@media screen and (min-width:1800px) {
+    .products {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 auto;
     }
-    .erro{
+
+    .erro {
         display: block;
     }
 }
 
-@media screen and (min-width:2000px){
-    .products{
+@media screen and (min-width:2000px) {
+    .products {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         margin: 0 auto;
     }
-    .erro{
+
+    .erro {
         display: block;
     }
 }
 
-@media screen and (min-width:2370px){
-    .products{
+@media screen and (min-width:2370px) {
+    .products {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         margin: 0 auto;
     }
-    .erro{
+
+    .erro {
         display: block;
     }
 }

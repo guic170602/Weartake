@@ -55,6 +55,7 @@ function criaPrudutos(produtos){
 
         for(let index in produtos){
             const article = document.createElement('article')
+            article.id = `produto${index}`
             article.classList.add('produto')
 
             article.appendChild(criaImagens(index, produtos))

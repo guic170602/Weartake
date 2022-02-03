@@ -7,6 +7,7 @@
     --azul-escuro: #3d317a;
     --roxo-claro: #6B54DE;
     --grad: linear-gradient(to right top, #2e245e, #3c2f7c, #4b3b9c, #5b48bc, #6b54de);
+    --grad-i: linear-gradient(to left top, #2e245e, #3c2f7c, #4b3b9c, #5b48bc, #6b54de); 
     --branco: #1f1f1f;
     --black-car: #acacac;
 }
@@ -45,5 +46,11 @@ div {
     100% {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+@keyframes showUp {
+    from {
+      opacity: 0;
     }
 }

@@ -103,16 +103,24 @@ function add(){
 }
 
 function deleteItem(){
-    this.parentElement.parentElement.remove()
-    contaCart--
-    incrementador()
-    verifica()
+    const img = document.querySelectorAll('.produtoCarrinho figure')
+    for(let index = 0; index < img.length; index++){
+        if(img[index].parentElement === this.parentElement.parentElement){
+            img[index].style.animation = "fadeOut 500ms"
+        }
+    }
+    this.parentElement.style.animation = 'fadeOut 500ms'
+    setTimeout(() => {
+        this.parentElement.parentElement.remove()
+        incrementador()
+        contaCart--
+        verifica()
+    },400)
 }
 
 function remove(){
     const removeCart = document.getElementsByClassName('remove')
     for(let index = 0; index<contaCart; index++){
-        const produtos = document.getElementsByClassName("produtoCarrinho")
         removeCart[index].addEventListener('click', deleteItem)
     }
 }

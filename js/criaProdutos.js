@@ -52,10 +52,10 @@ function criaPrudutos(produtos){
         secaoProdutos.appendChild(erro)
     }else{    
         secaoProdutos.classList.remove('erro')
-
+        let seg = 0.2
         for(let index in produtos){
+              
             const article = document.createElement('article')
-            article.id = `produto${index}`
             article.classList.add('produto')
 
             article.appendChild(criaImagens(index, produtos))
@@ -74,6 +74,8 @@ function criaPrudutos(produtos){
             divDescricao.appendChild(criaAdicionarAoCarrinho(index, produtos))
 
             article.appendChild(divDescricao)
+            article.style.animation = `showUp 1s 1 ease ${seg}s both`
+            seg+=0.2
             secaoProdutos.appendChild(article)
         }
     }

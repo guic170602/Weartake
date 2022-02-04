@@ -9,7 +9,9 @@
     --grad: linear-gradient(to right top, #2e245e, #3c2f7c, #4b3b9c, #5b48bc, #6b54de);
     --grad-i: linear-gradient(to left top, #2e245e, #3c2f7c, #4b3b9c, #5b48bc, #6b54de); 
     --branco: #1f1f1f;
-    --black-car: #acacac;
+    --car-d: #acacac;
+    --car-l: #333333;
+    --preto-principal: #101920;
 }
 
 body,
@@ -44,7 +46,6 @@ div {
     }
 
     100% {
-        visibility: visible;
         opacity: 1;
     }
 }
@@ -52,5 +53,15 @@ div {
 @keyframes showUp {
     from {
       opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
     }
 }

@@ -1,6 +1,9 @@
+@import url(./globalStyle.css);
+@import url(./variaveis.css);
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #101920;
+    background-color: var(--preto-principal);
 }
 
 body::-webkit-scrollbar {
@@ -20,10 +23,15 @@ header {
     margin-bottom: 20px;
 }
 
+header div{
+    margin: 27px 0;
+    display: flex;
+}
+
 header h1 {
+    margin: 0 auto;
     font-size: 3.75rem;
     color: var(--cinza-claro);
-    margin: 27px auto;
 }
 
 header nav ul {
@@ -86,7 +94,8 @@ main {
 
 .produto {
     width: 300px;
-    height: 380px;
+    height: max-content;
+    max-height: 400px;
     margin: 0 10px 40px;
     border: 2px solid var(--branco);
     transition: 1s;
@@ -143,7 +152,7 @@ main {
 
 .addCart {
     display: inline-block;
-    color: var(--black-car);
+    color: var(--car-d);
     font-size: 1.75rem;
     padding: 7.5px;
     font-weight: 500;
@@ -151,6 +160,7 @@ main {
     border: none;
     cursor: pointer;
     background-image: var(--grad-i);
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--preto-principal);
     margin-top: 10px;
     transition: 1s;
     border-radius: 5px;
@@ -167,7 +177,7 @@ main {
 
 .divPesquisa {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .pesquisa {
@@ -279,13 +289,12 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    visibility: hidden;
-    animation: 1s fadeIn;
+    animation: fadeIn 1000ms;
     animation-fill-mode: forwards;
 }
 
 .imagemCarrinho {
-    background-color: var(--black-car);
+    background-color: var(--car-d);
     width: 10rem;
     height: 10rem;
     display: flex;
@@ -333,7 +342,7 @@ main {
     width: 100%;
     height: 126px;
     border-top: 2px solid var(--preto);
-    background-color: var(--black-car);
+    background-color: var(--car-d);
 }
 
 .quantidade,
@@ -357,7 +366,7 @@ main {
     margin-top: 30px;
     font-size: 2rem;
     font-weight: 400;
-    color: #101920;
+    color: var(--preto-principal);
 }
 
 .erro {
@@ -374,30 +383,6 @@ main {
 
 .hidden {
     display: none;
-}
-
-#produto0 {
-    animation: showUp 1s 1 ease 0.2s both;
-}
-
-#produto1 {
-    animation: showUp 1s 1 ease 0.4s both;
-}
-
-#produto2 {
-    animation: showUp 1s 1 ease 0.6s both;
-}
-
-#produto3 {
-    animation: showUp 1s 1 ease 0.8s both;
-}
-
-#produto4 {
-    animation: showUp 1s 1 ease 1s both;
-}
-
-#produto5 {
-    animation: showUp 1s 1 ease 1.2s both;
 }
 
 

@@ -2,13 +2,10 @@ function filtro(){
     const input = document.getElementsByClassName('pesquisa')
     for(let index = 0; index < input.length; index++){
             input[index].addEventListener('keypress',  e => {
-            if (e.key === 'Enter') {
-                mudaAtual(input[index].value)
-                const newProduto = produtosBd.filter(produto => produto.nome.toLowerCase().includes(input[index].value.toLowerCase()))
-                criaPrudutos(newProduto)
-
-                add(newProduto)
-            }
+            mudaAtual(input[index].value)
+            const newProduto = produtosBd.filter(produto => produto.nome.toLowerCase().includes(input[index].value.toLowerCase()))
+            criaPrudutos(newProduto)
+            add(newProduto)
         })
     }
     const pesquisa = document.getElementsByClassName('pesquisar')

@@ -1,9 +1,9 @@
 let contaCart = 0
 
-function cartVazio(){
+function cartVazio() {
     const divVazia = document.createElement('div')
     divVazia.classList.add('vazia')
-    
+
     const textoVazio = document.createElement('h3')
     textoVazio.classList.add('textoVazio')
     textoVazio.innerHTML = 'Carrinho vázio'
@@ -17,7 +17,7 @@ function cartVazio(){
     return divVazia
 }
 
-function criaImagensDoCarrinho(index){
+function criaImagensDoCarrinho(index) {
     const figure = document.createElement('figure')
     figure.classList.add('imagemCarrinho')
     const img = document.createElement('img')
@@ -26,34 +26,34 @@ function criaImagensDoCarrinho(index){
     return figure
 }
 
-function criaNomeDoCarrinho(index){
+function criaNomeDoCarrinho(index) {
     const nome = document.createElement('h2')
     nome.classList.add('nomeDoCarrinho')
     nome.innerHTML = produtosBd[index].nome
     return nome
 }
 
-function criaPrecoDoCarrinho(index){
+function criaPrecoDoCarrinho(index) {
     const preco = document.createElement('p')
     preco.classList.add('precoDoCarrinho')
     preco.innerHTML = produtosBd[index].preco
     return preco
 }
 
-function criaRemoverElemento(){
+function criaRemoverElemento() {
     const add = document.createElement('button')
     add.classList.add('remove')
     add.innerHTML = 'Remover produto'
     return add
 }
 
-function cartPreenchido(index){
+function cartPreenchido(index) {
     const produtoCarrinho = document.createElement('div')
     produtoCarrinho.classList.add('produtoCarrinho')
 
     produtoCarrinho.appendChild(criaImagensDoCarrinho(index))
 
-    const dadosProduto =  document.createElement('div')
+    const dadosProduto = document.createElement('div')
     dadosProduto.classList.add('dadosProduto')
 
     dadosProduto.appendChild(criaNomeDoCarrinho(index))
@@ -66,18 +66,18 @@ function cartPreenchido(index){
     return produtoCarrinho
 }
 
-function verifica(){
-    const divQuant = document.querySelector(".carrinhoDeCompras") || document.querySelector(".carroDeCompras") 
+function verifica() {
+    const divQuant = document.querySelector(".carrinhoDeCompras") || document.querySelector(".carroDeCompras")
     const divCont = document.querySelector(".quantidadeTotal")
-    if(contaCart <= 0){
+    if (contaCart <= 0) {
         divQuant.innerHTML = ''
         divQuant.appendChild(cartVazio())
         const textoVazio = document.querySelector(".textoVazio").style.display = "block"
-        const add = document.querySelector(".addItens").style.display = "block" 
+        const add = document.querySelector(".addItens").style.display = "block"
         divCont.style.display = "none"
         divQuant.classList.add("carrinhoDeCompras")
         divQuant.classList.remove("carroDeCompras")
-    }else{
+    } else {
         divQuant.classList.remove("carrinhoDeCompras")
         divQuant.classList.add("carroDeCompras")
         const textoVazio = document.querySelector(".textoVazio").style.display = "none"
@@ -88,10 +88,10 @@ function verifica(){
 
 verifica()
 
-function add(){    
+function add() {
     const addCart = document.getElementsByClassName('addCart')
-    const divQuant = document.querySelector(".carrinhoDeCompras") || document.querySelector(".carroDeCompras") 
-    for(let index = 0; index<addCart.length; index++){
+    const divQuant = document.querySelector(".carrinhoDeCompras") || document.querySelector(".carroDeCompras")
+    for (let index = 0; index < addCart.length; index++) {
         addCart[index].addEventListener('click', () => {
             contaCart++
             divQuant.appendChild(cartPreenchido(index))
@@ -102,10 +102,10 @@ function add(){
     }
 }
 
-function deleteItem(){
+function removeAnimado () {
     const img = document.querySelectorAll('.produtoCarrinho figure')
-    for(let index = 0; index < img.length; index++){
-        if(img[index].parentElement === this.parentElement.parentElement){
+    for (let index = 0; index < img.length; index++) {
+        if (img[index].parentElement === this.parentElement.parentElement) {
             img[index].style.animation = "fadeOut 500ms"
         }
     }
@@ -115,17 +115,17 @@ function deleteItem(){
         incrementador()
         contaCart--
         verifica()
-    },400)
+    }, 400)
 }
 
-function remove(){
+function remove() {
     const removeCart = document.getElementsByClassName('remove')
-    for(let index = 0; index<contaCart; index++){
-        removeCart[index].addEventListener('click', deleteItem)
+    for (let index = 0; index < contaCart; index++) {
+        removeCart[index].addEventListener('click', removeAnimado)
     }
 }
 
-function incrementador(){
+function incrementador() {
     const divQuant = document.querySelector('.quantidadeTotal')
     divQuant.innerHTML = ""
     const divCart = document.getElementsByClassName('produtoCarrinho')
@@ -133,8 +133,8 @@ function incrementador(){
     let cont = 0
     let precoTotal = 0
 
-    for(let index = 0; index<divCart.length; index++){
-        const precoStr = preco[index].textContent.replace('R$ ','')
+    for (let index = 0; index < divCart.length; index++) {
+        const precoStr = preco[index].textContent.replace('R$ ', '')
         const precoInt = Number.parseInt(precoStr)
         precoTotal += precoInt
         cont++
@@ -166,7 +166,7 @@ function incrementador(){
     total.classList.add('total')
     total.appendChild(textoTotal)
     total.appendChild(numTotal)
-    
+
     divQuant.appendChild(quantidade)
     divQuant.appendChild(total)
 }

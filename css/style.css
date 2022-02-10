@@ -93,10 +93,10 @@ main {
 }
 
 .produto {
-    width: 300px;
+    width: 100%;
     height: max-content;
     max-height: 400px;
-    margin: 0 10px 40px;
+    margin: 0 0 40px;
     border: 2px solid var(--branco);
     transition: 0.5s;
 }
@@ -104,7 +104,7 @@ main {
 .produto:hover {
     box-shadow: 0px -1px 25px var(--azul-escuro), 1px 1px 25px var(--roxo-claro);
     border: 2px outset var(--roxo-claro);
-    transform: scale(1.04);
+    transform: scale(1.06);
 }
 
 .imagem {
@@ -347,6 +347,10 @@ main {
     animation: upToBotton 1s;
 }
 
+.quantidadeTotal p{
+    animation: fadeIn 1s;
+}
+
 .quantidade,
 .total {
     display: flex;
@@ -389,6 +393,11 @@ main {
 
 
 @media screen and (min-width:700px) {
+
+    .produto{
+        width: 90%;
+        margin: 0 10px 20px;
+    }
 
     header {
         flex-direction: row;
@@ -449,9 +458,17 @@ main {
 
     .pesquisaECarrinho {
         width: 340px;
-        margin-right: 35px;
+        margin:0 30px;
     }
 
+}
+
+@media screen and (min-width:950px) {
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width:1300px) {
